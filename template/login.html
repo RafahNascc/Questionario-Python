@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="icon" href="static\css\logo\2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="static\css\logo\2.png" type="image/x-icon">
+    <title>Selettra</title>
+</head>
+<body>
+
+    <div class="bar">
+
+        <img src="static\css\logo\2.png">
+        <p>Selettra</p>
+
+        <ul class="navegação">
+
+            <!--<li class="item1"><a href="#">Menu</a></li>-->
+            <li class="item2"><a href="https://www.selettra.com.br/tech_support.php">Contato</a></li>
+            <li class="item3"><a href="https://www.selettra.com.br/about.php">Sobre</a></li>
+            <!--<li class="item4"><a href="#">Sair</a></li> -->
+
+        </ul>
+
+    </div>
+
+    <div class="login-container">
+
+        <img src="static\css\logo\1.png">
+        <h2>Bem-Vindo!</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Email">
+            <input type="password" id="password" placeholder="Senha">
+            <button type="button" onclick="checkLogin()">Login</button>
+            <h1>Esqueci minha senha!</h1>
+
+        </form>
+    </div>
+    
+    <script src="static\js\login.js"></script>
+
+</body>
+</html>

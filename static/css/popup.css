@@ -1,0 +1,490 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Evita que as bordas afetem o tamanho total dos elementos */
+}
+.div-botao-fechar {
+    
+    display: flex;
+    justify-content: start;
+}
+
+#fechar {
+
+    background: linear-gradient(to bottom, #fc6e6e, #af1717); /* Cores do degradê */
+    
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: 15px;
+    box-shadow: 0px 6px 6px #dad8d8;
+    text-shadow: none;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #eee;
+    color: white;
+}
+
+#fechar:hover {
+
+    background: linear-gradient(to bottom, #a74949, #5f0c0c); /* Cores do degradê */
+}
+
+#pop-up {
+
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px; /* Largura desejada */
+    height: 550px; /* Altura desejada */
+    background-color: #f0f0f0;
+    padding: 20px;
+    z-index: 1;
+    overflow-y: scroll;
+    border-radius: 35px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.11);
+
+}
+
+#pop-up p {
+    margin: 0;
+}
+
+.div-radio {
+    display: inline-block;
+    margin: 50px;
+}
+
+fieldset {
+    border: none;
+    margin: 10px;
+    font-size: 30px;
+}
+
+#enviar {
+
+    width: 200px;
+    height: 60px;
+    margin: 40px;
+    position: relative;
+    left: 0px;
+    padding: 10px;
+    top: 0;
+    background-color: rgb(255, 145, 0);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+#enviar:hover {
+
+    background-color: rgb(177, 100, 0);
+}
+
+.perguntas {
+    
+    /* Adicione estilos CSS aqui */
+    background-color:  rgba(255, 255, 255, 0.144);;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccccccf8;
+    border-radius: 20px;
+    box-shadow: 1px 5px rgba(0, 0, 0, 0.021);
+
+}
+
+.perguntas::placeholder {
+
+    color: #000000c2;
+    margin:  10px;
+
+}
+#responsavel {
+
+    margin: 20px;
+    height: 40px;
+    width: 250px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 3px 2px rgba(0, 0, 0, 0.055);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.301) ;
+    border: 1px solid #9c9c9c4d;
+
+}
+#responsavel::placeholder {
+
+    color: #000000c2;
+    margin:  10px;
+
+}
+.data {
+    margin: 20px;
+}
+
+.data input {
+    height: 40px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 3px 2px rgba(0, 0, 0, 0.171);
+    outline: none;
+    margin-right: 1000px;
+}
+
+.serial {
+    margin: 20px;
+}
+
+.serial input {
+    height: 40px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 3px 2px rgba(0, 0, 0, 0.171);
+    outline: none;
+    margin-right: 1000px;
+}
+
+
+.textoo {
+    
+    margin: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 100px; /* Largura desejada para o rótulo */
+}
+
+h1 {
+    font-size: 20px;
+    margin-right: 900px;
+    position: relative;
+    left: 37%;
+}
+
+a{
+   
+    margin-right: 250px;
+
+}
+
+fieldset:not(.caixa_pergunta){
+
+    border: 1px solid rgba(14, 0, 0, 0.719);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 100%;
+    justify-content: center;
+}
+  
+legend {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 1366px) {
+
+    h1 {
+
+        text-align: center;
+        margin-left: auto;
+        margin-right: 70%;
+        
+    }
+
+    .bar ul{
+
+        float: right;
+        margin-right: -600px;
+        
+
+    }
+
+    fieldset:not(.caixa_pergunta){
+
+        display: flex;
+        align-items: center;
+        font-size:  13px;
+        font-weight: bold;
+
+
+    }
+    .perguntas{
+
+        margin: 10px;
+        
+    }
+
+    
+}
+
+
+@media screen and (max-width: 1600px){
+
+    h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+
+    .div-radio{
+
+        font-size: 20px;
+
+    }
+    legend{
+
+        font-size: 16px;
+        color:#000000;
+        
+    }
+
+}
+@media screen and (min-width: 400px) and (max-width: 733px){
+
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    
+    .div-botao-fechar {
+        display: flex;
+        justify-content: start;
+    }
+    
+    #fechar {
+        background: linear-gradient(to bottom, #fc6e6e, #af1717);
+        width: 30px; /* Reduza o tamanho do botão fechar */
+        height: 30px; /* Reduza o tamanho do botão fechar */
+        border-radius: 100%;
+        margin: 10px; /* Reduza a margem */
+        box-shadow: 0px 4px 4px #dad8d8; /* Reduza a sombra */
+        text-shadow: none;
+        cursor: pointer;
+        font-weight: bold;
+        border: 1px solid #eee;
+        color: white;
+    }
+    
+    #fechar:hover {
+        background: linear-gradient(to bottom, #a74949, #5f0c0c);
+    }
+    
+    #pop-up {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 46%;
+        transform: translate(-50%, -50%);
+        width: 88%; /* Defina a largura para 70% da página */
+        height: 88%; /* Defina a altura para 70% da página */
+        max-width: 390px; /* Defina a largura máxima desejada */
+        max-height: 600px; /* Defina a altura máxima desejada */
+        background-color: #f0f0f0;
+        padding: 20px;
+        z-index: 1;
+        overflow-y: scroll;
+        border-radius: 20px;
+        box-shadow: 3px 3px rgba(0, 0, 0, 0.11);
+
+        
+    }
+    
+    #pop-up p {
+        margin: 0;
+    }
+    
+    .div-radio {
+        display: inline-block;
+        margin: 20px; /* Reduza a margem */
+    }
+    
+    fieldset {
+        border: none;
+        margin: 10px;
+        font-size: 9px; /* Reduza o tamanho da fonte do campo de formulário */
+    }
+    
+    #enviar {
+        width: 150px; /* Reduza a largura do botão */
+        height: 40px;
+        margin: 20px; /* Reduza a margem */
+        position: relative;
+        left: 0;
+        padding: 10px;
+        top: 0;
+        background-color: rgb(255, 145, 0);
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    #enviar:hover {
+        background-color: rgb(177, 100, 0);
+    }
+    
+    .perguntas {
+        background-color: rgba(255, 255, 255, 0.144);
+        font-size: 9px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-shadow: 1px 3px rgba(0, 0, 0, 0.1); /* Ajuste a sombra */
+    }
+    
+    .perguntas::placeholder {
+        color: #000;
+    }
+    
+    #responsavel {
+        margin: 20px;
+        height: 40px;
+        width: 100%; /* Defina a largura para 100% para preencher o container */
+        font-size: 9px;
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 3px 2px rgba(0, 0, 0, 0.055);
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.301);
+        border: 1px solid #9c9c9c4d;
+    }
+    
+    #responsavel::placeholder {
+        color: #000;
+    }
+    
+    .data {
+        margin: 20px;
+    }
+    
+    .data input {
+        height: 40px;
+        width: 100%; /* Defina a largura para 100% para preencher o container */
+        border-radius: 20px;
+        border: none;
+        box-shadow: 3px 2px rgba(0, 0, 0, 0.171);
+        outline: none;
+    }
+    
+    .serial {
+        margin: 20px;
+    }
+    
+    .serial input {
+        height: 40px;
+        width: 100%; /* Defina a largura para 100% para preencher o container */
+        border-radius: 20px;
+        border: none;
+        box-shadow: 3px 2px rgba(0, 0, 0, 0.171);
+        outline: none;
+    }
+    
+    .textoo {
+        margin: 20px;
+    }
+    
+    label {
+        display: inline-block;
+        width: 100px;
+    }
+    
+    h1 {
+        font-size: 10px;
+    }
+    
+    a {
+        margin-right: 10px; /* Reduza a margem */
+    }
+    
+    fieldset:not(.caixa_pergunta) {
+        border: 1px solid rgba(14, 0, 0, 0.719);
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 9px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    legend {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+}
+
+* Barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da scrollbar vertical */
+    background-color: #f5f5f5;
+}
+
+/* Polegar da scrollbar (parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+    background-color: #55545400;
+    /* Cor do polegar da scrollbar */
+}
+
+.custom-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.034);
+    z-index: 999;
+    width: 240px;
+    height:  70px;
+
+}
+
+.success-popup {
+    
+    background: linear-gradient(to bottom, rgb(146, 223, 83),rgb(97, 184, 26)); /* Cores do degradê */
+    color: #000000;
+    top: 20%;
+    font-size: 23px;
+    color: #eee;
+    font-weight: bold;
+    align-items: center;
+}
+
+.error-popup {
+    background: linear-gradient(to bottom, #fc6e6e, #af1717); /* Cores do degradê */
+    color: #000000;
+    top: 20%;
+    font-size: 23px;
+    color: #eee;
+    font-weight: bold;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: #eee;
+    font-weight: bold;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    font-size: 17px;
+}

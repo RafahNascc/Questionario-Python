@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/popup.css') }}">
+    <link rel="icon" href="static\css\logo\2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="static\css\logo\2.png" type="image/x-icon">
+    <title>Selettra</title>
+</head>
+<body>
+
+    <div class="bar">
+
+            <img src="static\css\logo\2.png">
+
+        <p>Selettra</p>
+
+        <ul class="navegação">
+
+            <li class="item1"><a href="#">Menu</a></li>
+            <li class="item2"><a href="https://www.selettra.com.br/tech_support.php">Contato</a></li>
+            <li class="item3"><a href="https://www.selettra.com.br/about.php">Sobre</a></li>
+            <li class="item4"><a href="/">Sair</a></li>
+
+        </ul>
+
+    </div>
+
+    <div class="checklist-container">
+
+        <div class="check1">
+            <img src="static\css\imagens\image 1.png" id="img">
+            <button type="button" onclick="checklist()">CHECKLIST</button>
+        </div>
+
+        <div class="check1">
+            <img src="static\css\imagens\image 2.png" id="img">
+            <button type="button" onclick="checklist()">CHECKLIST</button>
+        </div>
+
+        <div class="check1">
+            <img src="static\css\imagens\image 3.png" id="img">
+            <button type="button" onclick="checklist()">CHECKLIST</button>
+        </div>
+
+        <div class="check1">
+            <img src="static\css\imagens\image 4.png" id="img">
+            <button type="button" onclick="checklist()">CHECKLIST</button>
+ 
+        </div>
+
+        <div class="check1">
+            <img src="static\css\imagens\Captura de tela 2023-09-14 202706.png" id="img">
+ 
+            <button type="button" onclick="checklist()">CHECKLIST</button>
+        </div>
+
+        <div class="check1">
+            <img src="static\css\imagens\image 6.png" id="img">
+ 
+            <button type="button" onclick="checklist()">CHECKLIST</button>
+        </div>
+
+        <div class="check1">
+            <img src="static\css\imagens\Captura de tela 2023-09-14 202605.png" id="img">
+    
+            <button type="button" onclick="checklist()">CHECKLIST</button>
+        </div>
+
+        <div class="check1">
+            <img src="static\css\imagens\Captura de tela 2023-09-14 202652.png" id="img">
+ 
+            <button type="button" onclick="checklist()">CHECKLIST</button>
+        </div>
+
+    </div>
+
+
+<!-- *********************************************************Inicio do check-list*********************************************************************************************** -->
+
+    <form id="myForm" action="/enviar_dados" method="POST">
+    </div>
+    
+    <div id="pop-up">
+        <div class="quest">
+          <form id="myForm">
+            <!--Isso é o botão de fechar de dentro do questionario-->
+            <div class="div-botao-fechar">
+              <button type="button" id="fechar" onclick="fecharPopUp()">X</button>
+            </div>
+  
+            <!--Inicio das perguntas-->
+
+            <fieldset class="caixa_pergunta">
+
+                <input type="text" id="responsavel" name="responsavel" placeholder="Responsável" required minlength="1" maxlength="100" pattern="[a-zA-Z0-9]+">
+                <input type="text" id="responsavel" name="data" placeholder="Data" required>
+                <input type="text" id="responsavel" name="serial" placeholder="Serial" required>
+
+            </fieldset>
+
+            <h1>1.PAINEL ELÉTRICO</h1>
+
+            <fieldset>
+
+                <legend>
+                    Montagem
+                </legend>
+              
+                <input type="radio" class="perguntas" name="status" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="status" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="status" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario1" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Identificação
+                </legend>
+              
+                <input type="radio" class="perguntas" name="identificação" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="identificação" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="identificação" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario2" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Aspecto
+                </legend>
+              
+                <input type="radio" class="perguntas" name="aspecto" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="aspecto" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="aspecto" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario3" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Cartão de memória no CLP
+                </legend>
+              
+                <input type="radio" class="perguntas" name="memoria" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="memoria" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="memoria" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario4" placeholder="Comentário">
+
+            </fieldset>
+
+            <h1>2.CONJUNTO DIREÇÃO</h1>
+
+            <fieldset>
+
+                <legend>
+                    Montagem
+                </legend>
+              
+                <input type="radio" class="perguntas" name="montagem_direcao" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="montagem_direcao" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="montagem_direcao" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario5" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Identificação
+                </legend>
+              
+                <input type="radio" class="perguntas" name="identificação_direcao" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="identificação_direcao" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="identificação_direcao" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario6" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Aspecto
+                </legend>
+              
+                <input type="radio" class="perguntas" name="aspecto_direcao" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="aspecto_direcao" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="aspecto_direcao" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario7" placeholder="Comentário">
+
+            </fieldset>
+
+            <h1>3.CONJUNTO TRAÇÃO</h1>
+
+            <fieldset>
+
+                <legend>
+                    Montagem
+                </legend>
+              
+                <input type="radio" class="perguntas" name="montagem_tracao" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="montagem_tracao" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="montagem_tracao" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario8" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Freio
+                </legend>
+              
+                <input type="radio" class="perguntas" name="freio_tracao" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="freio_tracao" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="freio_tracao" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario9" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Identificação
+                </legend>
+              
+                <input type="radio" class="perguntas" name="identificação_tracao" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="identificação_tracao" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="identificação_tracao" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario10" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Aspecto
+                </legend>
+              
+                <input type="radio" class="perguntas" name="aspecto_tracao" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="aspecto_tracao" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="aspecto_tracao" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario11" placeholder="Comentário">
+
+            </fieldset>
+
+            <h1>4.SENSORES</h1>
+
+            <fieldset>
+
+                <legend>
+                    Montagem (sensores detecção, sensores navegação Rfid, LEDs, sonoro...)
+                </legend>
+              
+                <input type="radio" class="perguntas" name="montagem_sensores" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="montagem_sensores" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="montagem_sensores" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario12" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Identificação
+                </legend>
+              
+                <input type="radio" class="perguntas" name="identificação_sensores" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="identificação_sensores" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="identificação_sensores" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario13" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Aspecto
+                </legend>
+              
+                <input type="radio" class="perguntas" name="aspecto_sensores" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="aspecto_sensores" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="aspecto_sensores" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario14" placeholder="Comentário">
+
+            </fieldset>
+
+            <h1>5.SISTEMA HIDRÁULICO</h1>
+
+            <fieldset>
+
+                <legend>
+                    Montagem Index / engate
+                </legend>
+              
+                <input type="radio" class="perguntas" name="montagem_engate" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="montagem_engate" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="montagem_engate" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario15" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Montagem sistema hidráulico
+                </legend>
+              
+                <input type="radio" class="perguntas" name="hidráulico_engate" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="hidráulico_engate" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="hidráulico_engate" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario16" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Identificação
+                </legend>
+              
+                <input type="radio" class="perguntas" name="identificação_engate" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="identificação_engate" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="identificação_engate" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario17" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Aspecto
+                </legend>
+              
+                <input type="radio" class="perguntas" name="aspecto_engate" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="aspecto_engate" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="aspecto_engate" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario18" placeholder="Comentário">
+
+            </fieldset>
+
+            <h1>6.BATERIAS / CARGA ENERGIA</h1>
+
+            <fieldset>
+
+                <legend>
+                    Montagem (baterias, conectores REMA, pinos carga...)
+                </legend>
+              
+                <input type="radio" class="perguntas" name="montagem_baterias" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="montagem_baterias" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="montagem_baterias" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario19" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Identificação
+                </legend>
+              
+                <input type="radio" class="perguntas" name="identificação_baterias" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="identificação_baterias" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="identificação_baterias" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario20" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Aspecto
+                </legend>
+              
+                <input type="radio" class="perguntas" name="aspecto_baterias" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="aspecto_baterias" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="aspecto_baterias" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario21" placeholder="Comentário">
+
+            </fieldset>
+
+            <h1>7.BOTOEIRA / SECCIONADORA / IHM</h1>
+
+            <fieldset>
+
+                <legend>
+                    Montagem
+                </legend>
+              
+                <input type="radio" class="perguntas" name="montagem_botoeira" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="montagem_botoeira" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="montagem_botoeira" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario22" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Identificação
+                </legend>
+              
+                <input type="radio" class="perguntas" name="identificação_botoeira" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="identificação_botoeira" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="identificação_botoeira" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario23" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Aspecto
+                </legend>
+              
+                <input type="radio" class="perguntas" name="aspecto_botoeira" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="aspecto_botoeira" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="aspecto_botoeira" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario24" placeholder="Comentário">
+
+            </fieldset>
+
+            <h1>8.MECÂNICA</h1>
+
+            <fieldset>
+
+                <legend>
+                    Montagem (tampas, portas, reforços, pino, polímeros...)
+                </legend>
+              
+                <input type="radio" class="perguntas" name="montagem_tampas" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="montagem_tampas" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="montagem_tampas" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario25" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Raspadores (limpa circuito)
+                </legend>
+              
+                <input type="radio" class="perguntas" name="raspadores_tampas" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="raspadores_tampas" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="raspadores_tampas" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario26" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Aspecto
+                </legend>
+              
+                <input type="radio" class="perguntas" name="aspecto_tampas" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="aspecto_tampas" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="aspecto_tampas" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario27" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Teste (rodas, travas, tampas, fechos...)Aspecto
+                </legend>
+              
+                <input type="radio" class="perguntas" name="teste_tampas" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="teste_tampas" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="teste_tampas" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario28" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Torqueamento (detalhes no projeto mecânico)
+                </legend>
+              
+                <input type="radio" class="perguntas" name="torqueamento_tampas" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="torqueamento_tampas" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="torqueamento_tampas" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario29" placeholder="Comentário">
+
+            </fieldset>
+
+            <h1>9.EXTERNA DO EQUIPAMENTO</h1>
+
+            <fieldset>
+
+                <legend>
+                    Pintura
+                </legend>
+              
+                <input type="radio" class="perguntas" name="pintura_equipaamento" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="pintura_equipaamento" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="pintura_equipaamento" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario30" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Adesivos e placas
+                </legend>
+              
+                <input type="radio" class="perguntas" name="adesivos_equipamento" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="adesivos_equipamento" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="adesivos_equipamento" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario31" placeholder="Comentário">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Joystick junto com equipamento
+                </legend>
+              
+                <input type="radio" class="perguntas" name="joystick_equipamento" value="OK" required> <a>OK</a>
+                <input type="radio" class="perguntas" name="joystick_equipamento" value="NOK" required> <a>NOK</a>
+                <input type="radio" class="perguntas" name="joystick_equipamento" value="NA" required> <a>NA</a>
+                <input type="text" class="perguntas" name="comentario32" placeholder="Comentário">
+
+            </fieldset>
+
+            
+            
+
+            
+            	
+
+    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+
+        <div class="quest">
+            <button type="/submit" id="enviar">Enviar</button>
+        </div>
+
+        </form>
+
+        </div>
+      </div>
+
+
+      <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="footer-title">Informações</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Empresa</a></li>
+                        <li><a href="#">Qualidade</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-title">Fale conosco</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:4133830403">(41) 3383-0403</a></li>
+                        <li><a href="mailto:contato@selettra.com.br">contato@selettra.com.br</a></li>
+                        <li class="end">Rua Santa Efigênia, 31, Roseira, São José dos Pinhais - PR</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <p class="footer-copyright">
+                        &copy; 2023 Todos os direitos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+
+    <script src="static\js\popop.js"></script>
+
+</body>
+</html>

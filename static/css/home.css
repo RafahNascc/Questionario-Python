@@ -1,0 +1,557 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Evita que as bordas afetem o tamanho total dos elementos */
+
+}
+
+body {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* Container da checklist */
+.checklist-container {
+    
+    max-width: 1600px; /* Ajustado para uma tela de 1920x1080 */
+    margin: 100px; /* Centralizar o container */
+    display: grid;
+    grid-template-rows: 380px 380px; /* Altura reduzida para acomodar a tela menor */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px; /* Espaço entre os elementos */
+    margin-top: 80px;
+}
+
+/* Item da checklist */
+.check1 {
+    background-color: rgba(241, 241, 241, 0.986);
+    width: 270px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 25px;
+    word-wrap: break-word;
+    box-shadow: 0px 4px 4px #0000006c;
+    align-items: center;
+}
+
+/* Barra superior */
+.bar {
+    width: 100%;
+    height: 100px;
+    background: #B73133;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px; /* Aumentado para acomodar a tela maior */
+}
+
+.bar img {
+
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+    
+}
+
+
+.bar p{
+    position: absolute;
+    left: 110px;
+    color: #FFF;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    margin-right: 1100px
+}
+
+/* Imagens dentro do container da checklist */
+#img{
+    
+    width: 200px; /* Aumentado para acomodar a tela maior */
+    height: 140px;
+    margin: 15px;
+    border-radius: 20px;
+}
+
+/* Títulos */
+h3 {
+    font-size: 24px;
+    text-align: center; /* Isso centraliza o texto horizontalmente */
+    display: block;    /* Isso garante que o elemento seja exibido como um bloco, ocupando a largura total do contêiner pai */
+    margin: 0 auto;     /* Isso centraliza o elemento horizontalmente no contêiner pai */
+}
+
+h4 {
+    font-size: 12px;
+    text-align: center; /* Para centralizar horizontalmente */
+    width: 200px; /* Tamanho desejado */
+    margin: 0 auto; /* Define a margem automática esquerda e direita para centralizar */
+}
+
+
+/* Barra de navegação superior */
+.bar ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bar ul li a {
+    margin-right: 10px; /* Aumentado para acomodar a tela maior */
+    color: rgb(252, 251, 251);
+    font-weight: bold;
+    text-decoration: none;
+    height: auto;
+}
+
+.bar ul li a:hover {
+    color: #883939;
+}
+
+/* Botões */
+button {
+    
+    width: 250px;
+    height: 50px;
+    margin: 10px 0;
+    background: linear-gradient(to bottom, #f8af41, #ff6600); /* Cores do degradê */
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.315);
+    cursor: pointer;
+    
+    
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #a8772d, #9e3f00); /* Cores do degradê quando o mouse passa por cima */
+}
+
+.footer {
+
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    height: 100%; 
+    
+}
+  
+.footer-title {
+
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    
+}
+  
+.footer-links {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 120px;
+}
+  
+.footer-links li {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+  
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+  
+.footer-copyright {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+  
+
+/* Media query para telas menores */
+@media screen and (max-width: 1460px) {
+    
+    .checklist-container {
+        
+        max-width: 100%;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+        display: grid;
+        grid-template-rows: 300px 300px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+
+    }
+
+    .check1 {
+        width: 270px;
+        height: 250px;
+        margin: 10px;
+
+    }
+
+    .bar {
+        height: auto;
+    }
+
+    .bar p {
+        font-size: 24px;
+        margin-right: 1000px;
+    }
+
+    .checklist-container img {
+        
+        width: 150px;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .bar ul {
+        font-size: 18px;
+    }
+
+    .rodape p {
+        margin-right: 0;
+    }
+
+    button {
+        width: 180px;
+    }
+
+}
+
+
+/* Media query para telas menores */
+@media screen and (max-width: 1600px) {
+
+    .checklist-container {
+        
+        max-width: 100%;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+        display: grid;
+        grid-template-rows: 300px 300px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .check1 {
+        width: 270px;
+        height: 250px;
+        margin: 10px;
+    }
+
+    .bar {
+        height: auto;
+    }
+
+    .bar p {
+        font-size: 45px;
+        margin-right: 1000px;
+    }
+
+    .checklist-container img {
+
+        width: 100px;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .bar ul {
+        font-size: 20px;
+    }
+
+    .rodape p {
+        margin-right: 0;
+    }
+
+    button {
+        width: 200px;
+        height: 40px;
+        margin: 15px 0;
+        font-size: 16px;
+    }
+
+    #img{
+    
+        width: 180px; /* Aumentado para acomodar a tela maior */
+        height: 130px;
+        margin: 15px;
+        border-radius: 20px;
+    }
+}
+
+/* Notebook */
+@media screen and (max-width: 1366px) {
+
+
+    /* Container da checklist */
+    .checklist-container {
+        
+        margin: 100px 60px; /* Centralizar o container */
+        display: grid;
+        grid-template-rows: repeat(2, 1fr); /* Altura reduzida para acomodar a tela menor */
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0px; /* Espaço entre os elementos */
+        margin-top: 80px;
+    }
+    
+    /* Item da checklist */
+    .check1 {
+        background-color: rgba(241, 241, 241, 0.986);
+        width: 270px;
+        height: 250px;
+        margin: 10px;
+        border-radius: 25px;
+        word-wrap: break-word;
+        box-shadow: 0px 4px 4px #0000006c;
+        align-items: center;
+    }
+    
+    /* Barra superior */
+    .bar {
+        width: 100%;
+        height: 100px;
+        background: #B73133;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px; /* Aumentado para acomodar a tela maior */
+    }
+    
+    .bar img {
+        width: 70px;
+        height: auto;
+        margin-right: 20px; /* Aumentado para acomodar a tela maior */
+    }
+    
+    .bar p {
+        color: #FFF;
+        font-size: 36px;
+        font-weight: bold;
+        margin: 0;
+        position: absolute; /* Posicionado no canto superior esquerdo */
+        top: 25px;
+        left: 120px;
+    }
+    
+    /* Imagens dentro do container da checklist */
+    #img{
+        
+        width: 180px; /* Aumentado para acomodar a tela maior */
+        height: 130px;
+        margin: 15px;
+        border-radius: 20px;
+    }
+    
+    /* Títulos */
+    h3 {
+        font-size: 24px;
+        text-align: center; /* Isso centraliza o texto horizontalmente */
+        display: block;    /* Isso garante que o elemento seja exibido como um bloco, ocupando a largura total do contêiner pai */
+        margin: 0 auto;     /* Isso centraliza o elemento horizontalmente no contêiner pai */
+    }
+    
+    h4 {
+        font-size: 12px;
+        text-align: center; /* Para centralizar horizontalmente */
+        width: 200px; /* Tamanho desejado */
+        margin: 0 auto; /* Define a margem automática esquerda e direita para centralizar */
+    }
+    
+    
+    /* Barra de navegação superior */
+    .bar ul {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        font-size: 25px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .bar ul li a {
+        margin-right: 10px; /* Aumentado para acomodar a tela maior */
+        color: rgb(252, 251, 251);
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .bar img {
+        position: absolute;
+        left: 45px;
+        margin-top: 45px;
+    }
+
+    .footer-title{
+
+        position: relative;
+        left: 0px;
+
+    }
+
+    .footer-links li a {
+        color: #fff;
+        text-decoration: none;
+        margin-top: 10px;
+        position: relative;
+        left: 175px;
+    }
+
+    .footer-links {
+
+        
+        list-style: none;
+        margin: 0;
+        margin-top: 10px;
+        
+
+
+    }
+      
+    .footer-links li {
+
+        display: inline-block;
+        margin-top: 10px;
+
+        
+    }
+            
+    .footer-copyright {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 50px;
+        
+    }
+    
+  
+}
+
+/* Barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #ffffff;
+}
+
+/* Polegar da scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: #272727;
+    border-radius: 8px;
+}
+
+@media screen and (min-width: 400px) and (max-width: 733px) {
+    .bar {
+        width: 100%;
+        height: 70px; /* Reduzir a altura da barra */
+        background: #B73133;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .bar img {
+        width: 60px;
+        height: auto;
+        position: absolute;
+        left: 15px;
+        margin-top: 0;
+    }
+
+    .bar p {
+        color: #FFF;
+        font-size: 24px; /* Reduzir o tamanho do texto na barra */
+        font-weight: bold;
+        margin: 0;
+        position: absolute;
+        left: 80px;
+        margin-top: 0px;
+    }
+
+    .bar ul {
+        display: flex;
+        align-items: center;
+        gap: 5px; /* Reduzir o espaço entre os elementos no menu */
+        font-size: 13px; /* Reduzir o tamanho do texto no menu */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bar ul li a {
+        margin-right: 5px;
+        color: rgb(252, 251, 251);
+        font-weight: bold;
+        text-decoration: none;
+        height: auto;
+        position: relative;
+        left: 230px;
+    }
+
+    .bar ul li a:hover {
+        color: #883939;
+    }
+
+    .checklist-container {
+        margin: 13%; /* Centralizar o container */
+        display: grid;
+        grid-template-rows: 280px 280px; /* Altura reduzida para acomodar a tela menor */
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px; /* Espaço entre os elementos */
+        margin-top: 40px;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .footer-title {
+
+        font-size: 15px;
+        margin-top: 20px;
+
+    }
+
+    .footer .footer-links li {
+        font-size: 13px;
+        position: relative;
+        right: 140px;
+    }
+
+    .footer .footer-links .end {
+        position: relative;
+        left: 15px;
+    }
+
+}
+
+
+
