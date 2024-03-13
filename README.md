@@ -1,2 +1,4 @@
 # Questionario-Python
-Trabalho desenvolvido para a diciplina de jornadas de aprendizagem, um projeto que busca automatizar processos que são realizados no papel.
+
+Projeto desenvolvido para a diciplina de Jornadas de Aprendizagem, em conjunto com Thaisa Apolonio, Guilherme Polakowski, Maria Eduarda Brito e Rafaela Nascimento. 
+7° Período. 
